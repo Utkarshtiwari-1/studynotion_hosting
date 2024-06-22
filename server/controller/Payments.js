@@ -5,7 +5,7 @@ const User = require("../Models/User");
 const mailsender = require("../Utils/mailsender");
 const mongoose = require("mongoose");
 const {couseEnrollmentEmail} = require("../mail/templates/CourseEnrollmentEmail");
-const { json } = require("react-router-dom");
+
 const crypto = require("crypto");
 const CourseProgress = require("../Models/CourseProgress");
 

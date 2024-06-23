@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getallcourses } from "../service/operations";
 import Courserender from "../Components/dashborad/Courserender";
+import toast from "react-hot-toast";
 
 function InstructorCourse(){
     const navigate = useNavigate();

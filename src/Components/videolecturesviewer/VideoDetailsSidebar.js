@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { setCompletedLectures,setCourseSectionData,setEntireCourseData,setTotalNoOfLectures, setcurrentsection, setcurrentsubsection } from "../../slices/viewCourseSlice";
 import { useEffect, useState } from "react";
 import { getfullcoursedetais } from "../../service/operations";
@@ -15,6 +15,7 @@ function VideoDetailsSidebar({setreviewmodal})
     } = useSelector((state)=>state.viewCourse);
     const dispatch = useDispatch();
     const [activestatus,setactivestatus] = useState("");
+    const location = useLocation();
 
     useEffect(()=>{
         const entirecoursedata = async()=>{

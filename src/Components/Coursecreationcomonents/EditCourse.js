@@ -19,7 +19,7 @@ function EditCourse()
             const response = await apiconnector('POST',COURSE_DETAILS_API,{courseid});
             if(!response.data.sucsess)
             {
-                throw new Error(response.data,message);
+                throw new Error(response.data.message);
             }
 
             let result = response.data.data;
